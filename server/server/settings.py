@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
-with open(BASE_DIR + '/server/config.json', 'r') as config: obj = json.load(config)
+with open(BASE_DIR + '/config.json', 'r') as config: obj = json.load(config)
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = obj["API_KEY"]
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'books'
 ]
 
 MIDDLEWARE = [
